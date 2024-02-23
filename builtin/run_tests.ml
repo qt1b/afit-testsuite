@@ -8,6 +8,7 @@ open Test_builtin_generate_primes
 open Test_builtin_encoding_msg
 open Test_builtin_ciphers
 open Test_builtin_break_ciphers
+open Test_builtin_chinese_remaindert
 
 let builtin_test_suite  = [
     ("builtin",            builtin_set);
@@ -17,7 +18,8 @@ let builtin_test_suite  = [
     ("generate_primes",    generate_primes_set);
     ("encoding_msg",       encoding_msg_set);
     ("ciphers",            ciphers_set);
-    ("break_ciphers",      break_ciphers_set)
+    ("break_ciphers",      break_ciphers_set);
+    ("chinese_remaindert", chinese_remaindert_set)
   ]
 
 let () = run_to_xml "trace_builtin_1.xml" [builtin_test_suite]

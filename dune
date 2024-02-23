@@ -1,10 +1,12 @@
 (library
-    (name test_tools)
-    (modules test_tools)
-    (libraries alcotest junit junit_alcotest))
+ (name test_tools)
+ (modules test_tools)
+ (libraries alcotest junit junit_alcotest))
 
 (env
-  (dev
-    (flags (:standard -g -w -27-33-32-39)))
-  (release
-    (flags (:standard -O3))))
+ (dev
+  (flags
+   (:standard -g -w -27-33-32-39)))
+ (release
+  (flags
+   (:standard -O3))))

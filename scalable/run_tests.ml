@@ -15,7 +15,7 @@ let scalable_test_suite =
      ("scalable_power",              power_set);
      ("scalable_test_primes",        test_primes_set)
      
-     (* Lignes qu'on peut ajouter dans la test_suite
+     (* Lignes qu'on peut ajouter dans la test_suite *) (*
      ("scalable_encoding",           encoding_msg_set);
      ("scalable_ciphers",            ciphers_set);
      ("scalable_break_ciphers",      break_ciphers_set) *)

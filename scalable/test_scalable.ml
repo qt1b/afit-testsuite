@@ -14,13 +14,28 @@ let add_n_tests () =
     and do_check ((a, b), expected) =
         check
             (list int)
-            (sprintf "gcd_b: %s and %s" (string_of_intlist a) (string_of_intlist b))
+            (sprintf "add_n: %s and %s" (string_of_intlist a) (string_of_intlist b))
             expected
             (add_n a b)
     in
     List.iter do_check cases
+
+let mult_b_tests () = 
+    let cases = 
+      [([0;1],[0; 0; 1; 1; 0; 1]), [0;0;1;1;0;1];
+       ([0;0;1],[0; 0; 1; 1; 0; 1]), [0;0;0;1;1;0;1];
+       ([0;1;1],[0; 0; 1; 1; 0; 1]), [0;0;1;0;0;0;0;1]]
+    and do_check ((a, b), expected) =
+        check
+            (list int)
+            (sprintf "mult_b: %s and %s" (string_of_intlist a) (string_of_intlist b))
+            expected
+            (mult_b a b)
+    in
+    List.iter do_check cases
+
     
     
 let scalable_set =
-    [("Addition of natural bitLists", `Quick, add_n_tests)(*;
-     ("Bezout on bitarrays function", `Quick, bezout_b_tests*)]
+    [("Addition of natural bitLists", `Quick, add_n_tests);
+     ("Multiplication of bitArrarys", `Quick, mult_b_tests)]
