@@ -30,7 +30,10 @@ let eratosthenes_tests () =
          (from_int 6, [from_int 2; from_int 3; from_int 5]);
          (from_int 25, [from_int 2; from_int 3; from_int 5;
                from_int 7; from_int 11; from_int 13;
-               from_int 17; from_int 19; from_int 23]) ]
+               from_int 17; from_int 19; from_int 23]);
+         ([0;1;0;0;1;1],[[0; 0; 1]; [0; 1; 1]; [0; 1; 0; 1]; [0; 1; 1; 1];
+               [0; 1; 1; 0; 1]; [0; 1; 0; 1; 1]; [0; 1; 0; 0; 0; 1];
+               [0; 1; 1; 0; 0; 1]; [0; 1; 1; 1; 0; 1] ])]
     and do_check (n, expected) =
         check
         (list (list int))
